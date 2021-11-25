@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JQ06Hover.html</title>
     <script src="../common/jquery/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
@@ -30,9 +30,21 @@
                     $(this).css("width","100px")
                         .css("height","150px")
                         .css("border","5px dotted yellow")
-
                 }
             );
+                //test code
+            $('div').hover(
+                function(){
+                    $(this).css({
+                        'width':'300px',
+                        'height':'50px',
+                        'backgroundColor': 'pink'
+                    });
+                },
+                function(){
+                    $('div').css('width',"400px")
+                        .css('color','red');
+                });
         });
     </script>
 </head>
@@ -42,6 +54,7 @@
 	<h3>마우스 오버/아웃으로 이미지크기 조절하기</h3>
 	
 	<img src="../images/7.jpg" alt="행운의7" />
+    <div>안녕하세여</div>
 </body>
 
 </html>
